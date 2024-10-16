@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <script>
+        // Function to calculate and display arithmetic results
+        function calculate() {
+            // Get values from input fields and convert them to numbers
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+
+            // Calculate sum, product, difference, and remainder
+            let sum = number1 + number2;
+            let product = number1 * number2;
+            let difference = number1 - number2;
+            let remainder = number1 % number2;
+
+            // Display results on the webpage
+            document.getElementById("sumResult").innerText = "Sum: " + sum;
+            document.getElementById("productResult").innerText = "Product: " + product;
+            document.getElementById("differenceResult").innerText = "Difference: " + difference;
+            document.getElementById("remainderResult").innerText = "Remainder: " + remainder;
+        }
+    </script>
+</head>
+<body>
+    <h1>Basic Arithmetic Operations</h1>
+    <label for="number1">Enter the first number:</label>
+    <input type="number" id="number1" required><br><br>
+
+    <label for="number2">Enter the second number:</label>
+    <input type="number" id="number2" required><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <h2>Results:</h2>
+    <p id="sumResult"></p>
+    <p id="productResult"></p>
+    <p id="differenceResult"></p>
+    <p id="remainderResult"></p>
+</body>
+</html>
